@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+<<<<<<< HEAD
+			<item value="/home/francesco/Dropbox/francesco_personale/tesi_magistrale/java_tesi_WS/LinearAlgebra_PC"/>
+=======
+>>>>>>> 7a6cda711ee118c733fd1fa7ce50ab394a305887
+			<item value="/home/francesco/git/LinearAlgebra_PC"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>
