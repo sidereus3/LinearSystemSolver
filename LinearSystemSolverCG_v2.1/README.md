@@ -1,34 +1,66 @@
-ReadMe
-======
+#ReadMe - LinearSystemSolver v2.1
 
-This is my first java code.
+
+------------------------------------------------------------------------------------------
+
+###Evolutionary step:
+
+- [] linear system size, **A** matrix and **b** vector elements are keyboard-input;
+- [x] linear system size, **A** matrix and **b** vector elements are read from text files;
+- [x] separated classes for linear system solver, read matrix 1D and read matrix 2D;
+
+------------------------------------------------------------------------------------------
+
 This code solve a simple **linear system** of the form Ax=b where:
 
-	- A is the known n-by-n matrix symmetric, positive define and real;
-	- b is known vector;
-	- x is the unknown vector;
+* **A** is the *known* n-by-n matrix symmetric, positive define and real;
+* **b** is *known* vector;
+* **x** is the *unknown* vector;
 
-The code read the A matrix and the b vector from the text files in the src folder.
+The separeted classes *readMatrix1D* and *readMatrix2D* read the **A** matrix and the **b** vector from the text files in the src folder. **A** and **b** are stored like sparse matrix and vector.
 
-
-Conjugate Gradient Method
--------------------------
+##Conjugate Gradient Method
 
 The system is solved by the **Conugate Gradient Method**; this method is implemented in the *DoubleCG class* included in the *Parallel Colt library*, multithreaded version of *Colt*.
 
 
-Packages & classes
--------------------------
+##Packages & classes
+
+###LinearSystemSolver class
 
 I imported:
 
-	- DoubleMatrix1D
-	- DoubleMatrix2D
-	- DoubleCG
-	- IterativeSolverDoubleNotConvergedException
-	- SparseDoubleMatrix1D
-	- SparseDoubleMatrix2D
+- java.io.*;
 
-All this classes are included in the **CERN PARALLEL COLT** library.   
+and from **CERN PARALLEL COLT** library:
 
-I used TextIO class like video output class.
+- DoubleMatrix1D;
+- DoubleCG;
+- IterativeSolverDoubleNotConvergedException;
+- SparseDoubleMatrix1D;
+
+-------------------------------------------------
+
+###readMatrix1D class
+
+I imported:
+
+- java.io.File;
+- java.util.Scanner;
+
+and from **CERN PARALLEL COLT** library:
+
+- SparseDoubleMatrix1D;
+
+-------------------------------------------------
+
+###readMatrix2D class
+
+I imported:
+
+- java.io.File;
+- java.util.Scanner;
+
+and from **CERN PARALLEL COLT** library:
+
+- SparseDoubleMatrix2D;
