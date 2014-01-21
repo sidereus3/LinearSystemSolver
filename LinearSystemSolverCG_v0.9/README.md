@@ -1,4 +1,4 @@
-#ReadMe
+#ReadMe - LinearSystemSolver v0.9
 
 This is my first java code.
 This code solve a simple **linear system** of the form Ax=b where:
