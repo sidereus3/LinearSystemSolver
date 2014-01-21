@@ -15,9 +15,10 @@ public class readCCsparseMatrix2D{
 	
 	/** The size. */
 	int SIZE = 0;
-	int[] Mi = {0,1};
-	int[] Mj = {0,1};
-	double[] Mv = {4.0,3.0};
+	int[] Mi = {0,2,1,3,0,2,1};
+	//int[] Mp = {0,2,4,6};
+	int[] Mj = {0,0,1,1,2,2,3};
+	double[] Mv = {4.0,1.0,2.0,5.0,1.0,1.0,5.0};
 	
 	boolean Mf = false;
 	boolean Mt = true;
