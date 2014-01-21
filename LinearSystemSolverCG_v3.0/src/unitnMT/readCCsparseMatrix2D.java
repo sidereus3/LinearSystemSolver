@@ -42,7 +42,7 @@ public class readCCsparseMatrix2D{
 		SIZE = dimensionMatrix2D();
 		matA = new SparseCCDoubleMatrix2D(SIZE,SIZE,Mi,Mj,Mv,Mf,Mf,Mt);
 		TextIO.put("End read SparseCCDoubleMatrix2D");
-		//loadMatrix2D();
+		loadMatrix2D();
 		
 
 		
@@ -83,9 +83,9 @@ public class readCCsparseMatrix2D{
 	 *
 	 * @throws FileNotFoundException the file not found exception
 	 */
-	/*public void loadMatrix2D() throws java.io.FileNotFoundException {
+	public void loadMatrix2D() throws java.io.FileNotFoundException {
 		
-		Scanner input2 = new Scanner(new File("src/A.txt"));
+	/*	Scanner input2 = new Scanner(new File("src/A.txt"));
 		
 		
 		TextIO.put("Go into loadMatrix2D method");
@@ -98,7 +98,7 @@ public class readCCsparseMatrix2D{
 		    }
 		}
 		
-		input2.close();
+		input2.close();*/
 		
 		// Print the known n-by-n matrix
 		System.out.println("\n"
@@ -114,7 +114,7 @@ public class readCCsparseMatrix2D{
 				+ matA + "\n"
 				+ "\n");	
 		
-	}*/
+	}
 	
 	
 	

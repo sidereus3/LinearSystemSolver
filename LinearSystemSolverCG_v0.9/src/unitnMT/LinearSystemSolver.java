@@ -4,15 +4,6 @@ package unitnMT;
 /**
  * The Class LinearSystemSolver.
  */
-
-// imported libraries
-//import java.util.*;
-//import java.lang.Object;
-//import java.io.BufferedReader;
-//import java.io.FileNotFoundException;
-//import java.io.FileReader;
-//import java.io.IOException;
-
 import cern.colt.matrix.tdouble.DoubleMatrix1D;
 import cern.colt.matrix.tdouble.DoubleMatrix2D;
 import cern.colt.matrix.tdouble.algo.solver.DoubleCG;
