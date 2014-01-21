@@ -1,5 +1,8 @@
 #ReadMe - LinearSystemSolver v1.2
 
+
+------------------------------------------------------------------------------------------
+
 ###Evolutionary step:
 
 The code read the **A** matrix and the **b** vector from the text files in the src folder.
