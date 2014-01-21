@@ -3,6 +3,7 @@
 ###Evolutionary step:
 
 The code read the **A** matrix and the **b** vector from the text files in the src folder.
+------------------------------------------------------------------------------------------
 
 This code solve a simple **linear system** of the form Ax=b where:
 
