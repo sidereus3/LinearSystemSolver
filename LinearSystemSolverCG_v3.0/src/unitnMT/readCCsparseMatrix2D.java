@@ -1,10 +1,8 @@
 package unitnMT;
 
 import java.io.File;
-//import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-//import cern.colt.matrix.tdouble.impl.SparseDoubleMatrix2D;
 import cern.colt.matrix.tdouble.impl.SparseCCDoubleMatrix2D;
 
 // TODO: Auto-generated Javadoc

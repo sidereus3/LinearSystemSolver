@@ -5,7 +5,9 @@
 
 ###Evolutionary step:
 
-The code read the **A** matrix and the **b** vector from the text files in the src folder.
+- [ ] linear system size, **A** matrix and **b** vector elements are keyboard-input;
+- [x] linear system size, **A** matrix and **b** vector elements are read from text files;
+- [x] separated classes for linear system solver, read matrix 1D and read matrix 2D;
 
 ------------------------------------------------------------------------------------------
 
@@ -15,7 +17,7 @@ This code solve a simple **linear system** of the form Ax=b where:
 * **b** is *known* vector;
 * **x** is the *unknown* vector;
 
-**A** and **b** are stored like sparse matrix and vector.
+The code read the **A** matrix and the **b** vector from the text files in the src folder. **A** and **b** are stored like sparse matrix and vector.
 
 ##Conjugate Gradient Method
 

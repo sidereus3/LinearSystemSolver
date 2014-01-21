@@ -5,7 +5,6 @@ package unitnMT;
 import java.io.*;
 
 import cern.colt.matrix.tdouble.DoubleMatrix1D;
-//import cern.colt.matrix.tdouble.DoubleMatrix2D;
 import cern.colt.matrix.tdouble.algo.solver.DoubleCG;
 import cern.colt.matrix.tdouble.algo.solver.IterativeSolverDoubleNotConvergedException;
 import cern.colt.matrix.tdouble.impl.SparseDoubleMatrix1D;

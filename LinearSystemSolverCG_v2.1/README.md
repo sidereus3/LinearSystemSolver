@@ -3,11 +3,12 @@
 
 ------------------------------------------------------------------------------------------
 
-###Evolutionary step:
+###Evolutionary steps:
 
-- [] linear system size, **A** matrix and **b** vector elements are keyboard-input;
+- [ ] linear system size, **A** matrix and **b** vector elements are keyboard-input;
 - [x] linear system size, **A** matrix and **b** vector elements are read from text files;
 - [x] separated classes for linear system solver, read matrix 1D and read matrix 2D;
+- [ ] **A** matrix is part of the code, but it's stored like **SparseCCDoubleMatrix2D**;
 
 ------------------------------------------------------------------------------------------
 
