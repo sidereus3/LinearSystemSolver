@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.Scanner;
 
 import cern.colt.matrix.tdouble.impl.SparseCCDoubleMatrix2D;
+import cern.colt.matrix.tdouble.impl.SparseRCDoubleMatrix2D;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -14,7 +15,7 @@ public class readCCsparseMatrix2D{
 	/** The size. */
 	int SIZE = 0;
 	int[] Mi = {0,2,1,3,0,2,1};
-	//int[] Mp = {0,2,4,6};
+	int[] Mp = {0,2,4,6,7};
 	int[] Mj = {0,0,1,1,2,2,3};
 	double[] Mv = {4.0,1.0,2.0,5.0,1.0,1.0,5.0};
 	
@@ -22,7 +23,7 @@ public class readCCsparseMatrix2D{
 	boolean Mt = true;
 	
 	/** The mat a. */
-	SparseCCDoubleMatrix2D matA;
+	SparseRCDoubleMatrix2D matA;
 	
 	/** The input. */
 	Scanner input;
@@ -38,7 +39,7 @@ public class readCCsparseMatrix2D{
 		
 		input = new Scanner(new File("src/A.txt"));
 		SIZE = dimensionMatrix2D();
-		matA = new SparseCCDoubleMatrix2D(SIZE,SIZE,Mi,Mj,Mv,Mf,Mf,Mt);
+		matA = new SparseRCDoubleMatrix2D(SIZE,SIZE,Mp,Mi,Mv);//,Mf,Mf,Mf);
 		TextIO.put("End read SparseCCDoubleMatrix2D");
 		loadMatrix2D();
 		
