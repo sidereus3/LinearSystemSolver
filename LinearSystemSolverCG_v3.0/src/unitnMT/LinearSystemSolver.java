@@ -91,14 +91,14 @@ public class LinearSystemSolver {
 		printDescription();
 
 
-		readCCsparseMatrix2D rCCsM2D = new readCCsparseMatrix2D();
+		readRCsparseMatrix2D rRCsM2D = new readRCsparseMatrix2D();
 		readMatrix1D rM1D = new readMatrix1D();
 
 		
-		LinearSystemSolver LinearSystem = new LinearSystemSolver(rCCsM2D.SIZE);		
+		LinearSystemSolver LinearSystem = new LinearSystemSolver(rRCsM2D.SIZE);		
 		
 		DoubleCG conjugateGradient = new DoubleCG(LinearSystem.matx);
-		DoubleMatrix1D matSol = conjugateGradient.solve(rCCsM2D.matA,
+		DoubleMatrix1D matSol = conjugateGradient.solve(rRCsM2D.matA,
 				rM1D.matb,LinearSystem.matx);
 		
 		printMatX(matSol);

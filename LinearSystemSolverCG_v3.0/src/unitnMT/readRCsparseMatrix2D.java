@@ -3,14 +3,13 @@ package unitnMT;
 import java.io.File;
 import java.util.Scanner;
 
-import cern.colt.matrix.tdouble.impl.SparseCCDoubleMatrix2D;
 import cern.colt.matrix.tdouble.impl.SparseRCDoubleMatrix2D;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class readCCsparseMatrix2D.
  */
-public class readCCsparseMatrix2D{
+public class readRCsparseMatrix2D{
 	
 	/** The size. */
 	int SIZE = 0;
@@ -35,7 +34,7 @@ public class readCCsparseMatrix2D{
 	 *
 	 * @throws FileNotFoundException the file not found exception
 	 */
-	readCCsparseMatrix2D() throws java.io.FileNotFoundException {
+	readRCsparseMatrix2D() throws java.io.FileNotFoundException {
 		
 		input = new Scanner(new File("src/A.txt"));
 		SIZE = dimensionMatrix2D();
