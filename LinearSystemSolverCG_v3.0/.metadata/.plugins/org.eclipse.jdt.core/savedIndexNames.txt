@@ -1,0 +1,25 @@
+INDEX VERSION 1.126+/home/francesco/git/LinearAlgebra_PC/.metadata/.plugins/org.eclipse.jdt.core
+<<<<<<< HEAD
+3185925962.index
+2258370215.index
+574855088.index
+4081879963.index
+1431831365.index
+2441898237.index
+3863849070.index
+3020891780.index
+1648919096.index
+761659056.index
+3528766831.index
+1211646091.index
+4215556225.index
+304873740.index
+1593792608.index
+3142107428.index
+2379266884.index
+1874780019.index
+451721401.index
+4035037127.index
+93804853.index
+=======
+>>>>>>> 7a6cda711ee118c733fd1fa7ce50ab394a305887
