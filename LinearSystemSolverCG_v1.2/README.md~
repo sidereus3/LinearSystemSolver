@@ -1,12 +1,12 @@
-#ReadMe - LinearSystemSolver v0.9
+#ReadMe - LinearSystemSolver v1.2
 
 
 ------------------------------------------------------------------------------------------
 
 ###Evolutionary steps:
 
-- [x] linear system size, **A** matrix and **b** array elements are keyboard-input;
-- [-] linear system size, **A** matrix and **b** array elements are read from text files;
+- [-] linear system size, **A** matrix and **b** array elements are keyboard-input;
+- [x] linear system size, **A** matrix and **b** array elements are read from text files;
 - [-] separated classes for linear system solver, read matrix 1D and read matrix 2D;
 - [-] **A** matrix is part of the code, but it's stored like **SparseRCDoubleMatrix2D**;
 
@@ -22,7 +22,6 @@ This code solve a simple **linear system** of the form Ax=b where:
 The rows number of linear system and matrix and array elements are keyboard-input. I used *TextIO* class to read input values and to print the results.
 
 Matrix and arrays are stored like sparse matrix and array.
-
 
 ##Conjugate Gradient Method
 

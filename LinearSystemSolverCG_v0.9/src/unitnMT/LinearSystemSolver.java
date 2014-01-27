@@ -3,6 +3,20 @@ package unitnMT;
 // TODO: Auto-generated Javadoc
 /**
  * The Class LinearSystemSolver.
+ * 
+ * 
+ * This class solves a linear system by DoubleCG class. All data (known and
+ * unknown matrices and arrays) are stored like sparse matrices or arrays.
+ * 
+ * The DoubleCG class requires only sparse matrices and arrays to solve the
+ * linear system.
+ * 
+ * Only three methods are necessary:
+ * -the constructor method LinearSystemSolver();
+ * -the printDescription() method, to print the description
+ * 	of the code;
+ * -the inputParameters() method is necessary to take the
+ * 	input from keyboard.
  */
 import cern.colt.matrix.tdouble.DoubleMatrix1D;
 import cern.colt.matrix.tdouble.DoubleMatrix2D;
@@ -15,26 +29,34 @@ import cern.colt.matrix.tdouble.impl.SparseDoubleMatrix2D;
 // TODO: Auto-generated Javadoc
 /**
  * The Class LinearSystemSolver.
-*/
+ */
  
 public class LinearSystemSolver {
 	
-	/** The mat a. */
-	DoubleMatrix2D matA;		// The known n-by-n matrix
 	
-	/** The matb. */
-	DoubleMatrix1D matb;		// The known matrix
+	/** The size.
+	 * 	numbers of rows of the linear system */
+	private static int SIZE;
 	
-	/** The matx. */
-	DoubleMatrix1D matx;		// The unknown matrix
+	/** The matrix A.
+	 * 	is the known SIZE-by-SIZE matrix */
+	DoubleMatrix2D matA;
 	
-	/** The size. */
-	private static int SIZE;	// Number of rows of the linear system
+	/** The array b.
+	 * 	is the known array */
+	DoubleMatrix1D matb;
 	
+	/** The mat x.
+	 * 	is the unknown array */
+	DoubleMatrix1D matx;
+
 	
 	
 /**
- * Instantiates a new linear algebra.
+ * Instantiates a new linear system solver.
+ * 
+ * Once the dimension of the linear system is known, it's possible to
+ * instantiate the matrices
  */
 	LinearSystemSolver() {
 
@@ -48,6 +70,9 @@ public class LinearSystemSolver {
 	
 /**
  * Prints the description.
+ * 
+ * First called method, it contains a simple introduction about what the code
+ * can do.
  */
 	public static void printDescription(){
 		
@@ -68,6 +93,8 @@ public class LinearSystemSolver {
 	
 /**
  * Input parameters.
+ * 
+ * This method take in input the the values from keyboard
  */
 	private void inputParameters(){
 		
@@ -90,6 +117,9 @@ public class LinearSystemSolver {
 		System.out.println("\n"
 				+ matA + "\n"
 				+ "\n");
+		
+		
+		
 		
 		// Fill and print the known vector
 		System.out.println("\n"
@@ -115,17 +145,22 @@ public class LinearSystemSolver {
  * The main method.
  *
  * @param args the arguments
- * @throws IterativeSolverDoubleNotConvergedException the iterative solver double not converged exception
+ * @throws IterativeSolverDoubleNotConvergedException
+ * 				the iterative solver double not converged exception
+ * 
+ * The main method first calls the printDescription() method, it reads the SIZE
+ * of the linear system and thus calls the constructor method.
+ * Once the matrices are instantiated, the inputParameters() method is called
+ * and all the matrices are filled.
+ * 
+ * The DoubleCG() object is constructed and the solver is called.
+ *  
  */
 	public static void main(String[] args) throws IterativeSolverDoubleNotConvergedException {
 
 		
 		printDescription();
 		
-		// input the number of rows of the linear system
-		/*SIZE = Integer.parseInt(
-				JOptionPane.showInputDialog("Input row numbers of the linear system : ")
-				);*/
 		TextIO.put("Please insert the number of rows of the linear system: ");
 		SIZE = TextIO.getShort();
 		
@@ -133,8 +168,8 @@ public class LinearSystemSolver {
 
 		LinearSystem.inputParameters();		
 		
-		DoubleCG prova = new DoubleCG(LinearSystem.matx);
-		DoubleMatrix1D matSol = prova.solve(LinearSystem.matA,
+		DoubleCG conjugateGradient = new DoubleCG(LinearSystem.matx);
+		DoubleMatrix1D matSol = conjugateGradient.solve(LinearSystem.matA,
 				LinearSystem.matb,LinearSystem.matx);
 		
 		System.out.println("\n"
