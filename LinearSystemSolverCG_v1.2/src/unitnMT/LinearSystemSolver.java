@@ -1,8 +1,20 @@
 package unitnMT;
 
 /**
- * @desc	Linear Algebra solve a linear system Ax=b with Conjugate Gradient
- * 			Method, implemented in DoubleCG class of Parallel Colt library.
+ * LinearSystemSolver v1.2
+ * 
+ * @desc	This class solves a linear system by DoubleCG class. All data (known and
+ * 			unknown matrices and arrays) are stored like sparse matrices or arrays.
+ * 
+ * 			The DoubleCG class requires only sparse matrices and arrays to solve the
+ * 			linear system.
+ * 
+ * 			Only three methods are necessary:
+ * 				-the constructor method LinearSystemSolver();
+ * 				-the printDescription() method, to print the description
+ * 				of the code;
+ * 				-the inputParameters() method is necessary to take the
+ * 				input from keyboard.
  * 
  * @author	Francesco Serafin, 2013
  * Copyright GPL v. 3 (http://www.gnu.org/licenses/gpl.html)
@@ -27,18 +39,21 @@ import cern.colt.matrix.tdouble.impl.SparseDoubleMatrix2D;
  */
 public class LinearSystemSolver {
 	
-	/** The known n-by-n matA. */
+	/** The size.
+	 * 	numbers of rows of the linear system */
+	private static int SIZE;
+	
+	/** The matrix A.
+	 * 	is the known SIZE-by-SIZE matrix */
 	DoubleMatrix2D matA;
 	
-	/** The known matrix matb. */
+	/** The array b.
+	 * 	is the known array */
 	DoubleMatrix1D matb;
 	
-	/** The unknown matrix matx. */
+	/** The mat x.
+	 * 	is the unknown array */
 	DoubleMatrix1D matx;
-	
-	/** The number of rows of the
-	 * linear system. */
-	private static int SIZE;
 	
 	
 	
@@ -84,11 +99,11 @@ public class LinearSystemSolver {
 	
 	
 	
-	/**
+/**
 	 * Read matrix dimension.
 	 *
 	 * @desc	readMatrixDimension is the method where read the dimension
-	 * 			of the n-by-n sparse matrix A.
+	 * 			of the SIZE-by-SIZE sparse matrix A.
 	 * @return	the number of rows of the linear system
 	 */
 	public static int readMatrixDimension(){
@@ -137,15 +152,17 @@ public class LinearSystemSolver {
 	
 	
 /**
- * Gets the parameters.
- *
- * @return the parameters
- * @throws FileNotFoundException the file not found exception
- * @desc		inputParameters is a non-static method, so it's contained in
- * the Stack memory. It receives the value by an Input Dialog
- * Window for A matrix and an Input Dialog Window for b matrix.
- * The result is the complete matrices of the system.
- */
+ 	* Gets the parameters.
+ 	*
+ 	* @desc	inputParameters is a non-static method, so it's contained in
+ 	* 			the Stack memory. It receives the value by an Input Dialog
+ 	* 			Window for A matrix and an Input Dialog Window for b matrix.
+ 	* 			The result is the complete matrices of the system.
+ 	*
+ 	* @return 	the filled matrices
+ 	* 
+ 	* @throws 	FileNotFoundException the file not found exception
+ 	*/
 	private void readMatrixParameters() throws java.io.FileNotFoundException {
 		
 		// read the data in the n-by-n matA and in the known matb
@@ -186,7 +203,7 @@ public class LinearSystemSolver {
 				+ matA + "\n"
 				+ "\n");
 		
-		// Print the known vector
+		// Print the known array
 		System.out.println("\n"
 				+ "b MATRIX =========================================\n"
 				+ "\n"
@@ -199,8 +216,13 @@ public class LinearSystemSolver {
 
 	}
 	
-	/**
+	
+	
+/**
 	 * Prints the mat x.
+	 * 
+	 * @desc	this method print the solution of the conjugate gradient
+	 * 			method
 	 *
 	 * @param 	matSol the matrix of solution is the result of the conjugate
 	 * 			gradient method
@@ -221,13 +243,15 @@ public class LinearSystemSolver {
 	
 	
 /**
- * The main method.
- *
- * @param	args the arguments
- * @throws	IterativeSolverDoubleNotConvergedException the iterative solver double not converged exception
- * @throws	FileNotFoundException the file not found exception is useful if you want a robust code. Insert
- * 			in a try-catch get error when the read text file is empty.
- */
+ 	* The main method.
+ 	*
+ 	* @param	args the arguments
+ 	* 
+ 	* @throws	IterativeSolverDoubleNotConvergedException the iterative solver double not converged exception
+ 	* 
+ 	* @throws	FileNotFoundException the file not found exception is useful if you want a robust code. Insert
+ 	* 			in a try-catch get error when the read text file is empty.
+ 	*/
 	public static void main(String[] args) throws IterativeSolverDoubleNotConvergedException, java.io.FileNotFoundException {
 
 		
