@@ -1,7 +1,15 @@
 package unitnMT;
 
+/**
+ * LinearSystemSolver v2.1
+ * 
+ * @desc	This class contains only the call to the DoubleCG class. The other method
+ * 			are print method.
+ * 
+ * @author	Francesco Serafin, 2013
+ * Copyright GPL v. 3 (http://www.gnu.org/licenses/gpl.html)
+ * */
 
-//import java.util.*;
 import java.io.*;
 
 import cern.colt.matrix.tdouble.DoubleMatrix1D;
@@ -25,6 +33,9 @@ public class LinearSystemSolver {
 	
 /**
  * Instantiates a new linear system solver.
+ * 
+ * @desc	in this case, it's instantiates only the sparse array that
+ * 			contains the solution
  *
  * @param ROWS the rows
  */
@@ -79,12 +90,15 @@ public class LinearSystemSolver {
 	
 	
 /**
- * The main method.
- *
- * @param args the arguments
- * @throws IterativeSolverDoubleNotConvergedException the iterative solver double not converged exception
- * @throws FileNotFoundException the file not found exception
- */
+ 	* The main method.
+ 	* 
+ 	* @desc this method calls the other class readMatrix1D and readMatrix2D. Once the
+ 	* 		files are read, the main is equal to the main v0.9 and v1.2
+ 	*
+ 	* @param args the arguments
+ 	* @throws IterativeSolverDoubleNotConvergedException the iterative solver double not converged exception
+ 	* @throws FileNotFoundException the file not found exception
+ 	*/
 	public static void main(String[] args) throws IterativeSolverDoubleNotConvergedException, java.io.FileNotFoundException {
 
 		

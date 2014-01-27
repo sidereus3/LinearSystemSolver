@@ -147,15 +147,15 @@ public class LinearSystemSolver {
 /**
  	* The main method.
  	*
- 	* @param args the arguments
- 	* @throws IterativeSolverDoubleNotConvergedException
- 	* 				the iterative solver double not converged exception
  	* @desc The main method first calls the printDescription() method, it reads the SIZE
  	* 		 of the linear system and thus calls the constructor method.
  	* 		 Once the matrices are instantiated, the inputParameters() method is called
  	* 		 and all the matrices are filled.
  	* 
  	* 		 The DoubleCG() object is constructed and the solver is called.
+ 	* @param args the arguments
+ 	* @throws IterativeSolverDoubleNotConvergedException
+ 	* 				the iterative solver double not converged exception
  	*  
  	*/
 	public static void main(String[] args) throws IterativeSolverDoubleNotConvergedException {

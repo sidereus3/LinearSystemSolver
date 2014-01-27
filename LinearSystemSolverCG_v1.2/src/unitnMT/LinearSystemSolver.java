@@ -9,12 +9,15 @@ package unitnMT;
  * 			The DoubleCG class requires only sparse matrices and arrays to solve the
  * 			linear system.
  * 
- * 			Only three methods are necessary:
+  * 		Four methods are necessary:
  * 				-the constructor method LinearSystemSolver();
  * 				-the printDescription() method, to print the description
  * 				of the code;
- * 				-the inputParameters() method is necessary to take the
- * 				input from keyboard.
+ * 				-the readMatrixDimension() method, that verifies if the files
+ * 				that contains the matrices are right linked and reads the dimension
+ * 				of the linear system;
+ * 				-the readMatrixParameters() method, that reads the values from the
+ * 				files.
  * 
  * @author	Francesco Serafin, 2013
  * Copyright GPL v. 3 (http://www.gnu.org/licenses/gpl.html)
@@ -244,6 +247,10 @@ public class LinearSystemSolver {
 	
 /**
  	* The main method.
+ 	*
+ 	* @desc		the evolutionary than v0.9 is the line 266, where is called the
+ 	* 			method inputParameters(). So the matrices are filled with elements
+ 	* 			read from text files.
  	*
  	* @param	args the arguments
  	* 
